@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Hammersmith+One&family=Racing+Sans+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" id="airlines-resource">
+                    <a class="nav-link" href="#Airlines">Airlines</a>
+                </li>
+                <li class="nav-item" id="flights-resource">
+                    <a class="nav-link" href="#Flights">Flights</a>
+                </li>
+                <li class="nav-item" id="insurances-resource">
+                    <a class="nav-link" href="#Insurances">Insurances</a>
+                </li>
+                <li class="nav-item" id="contract-resource">
+                    <a class="nav-link" href="#ContractInformation">Contract Information<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="Airlines">
+
+            <h1>AIRLINES</h1>
+            <div class="row my-4 border border-secondary p-4">
+                <h5>REGISTER AIRLINE</h5>
+                <form class="w-100">
+                    <div class="form-group">
+                        <label class="form">Airline address</label>
+                        <input type="text" id="register-airline-address" placeholder="0x..." class="form-control">
+                    </div>
+                    <btn class="btn btn-primary w-100" id="submit-register-airline">Register</btn>
+                </form>
+            </div>
+
+            <div class="row my-4 border border-secondary p-4">
+                <h5>CHECK AIRLINE STATUS</h5>
+                <form class="w-100">
+                    <div class="form-group">
+                        <label class="form">Airline address</label>
+                        <input type="text" id="check-airline-address" placeholder="0x..." class="form-control">
+                    </div>
+                    <btn class="btn btn-primary w-100" id="check-airline-status">Check Status</btn>
+
+                    <hr class="border border-secondary" />
+                    <div class="form-group">
+                        <label class="form">Is Registered</label>
+                        <span id="is-registered-check" class="text-success"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form">Participates in voting</label>
+                        <span id="is-voter-check" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form">Approved</label>
+                        <span id="is-approved-check" class="text-danger"></span>
+                    </div>
+
+                    <div id="register-airline-errors">
+                    </div>
+                </form>
+            </div>
+
+            <div class="row my-4 border border-secondary p-4">
+                <h5>FUND AIRLINE</h5>
+                <form class="w-100">
+                    <div class="form-group">
+                        <label class="form">Airline to fund</label>
+                        <input type="text" id="fund-airline-address" placeholder="0x..." class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form">Funding amount (ETH)</label>
+                        <input type="text" id="airline-fund" placeholder="10" class="form-control">
+                    </div>
+                    <btn class="btn btn-primary w-100" id="fund-airline">Submit funds</btn>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="Flights">
+
+            <h1>FLIGHTS</h1>
+            <div class="row my-4 border border-secondary p-4">
+                <h5>REGISTER FLIGHT</h5>
+                <form class="w-100">
+                    <div class="form-group">
+                        <label class="form">Registering airline</label>
+                        <input type="text" id="register-flight-airline" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form">Flight reference</label>
+                        <input type="text" id="register-flight-reference" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form">Status</label>
+                        <select id="register-flight-status" class="custom-select form-control">
+                            <option class="dropdown-item" value="0" selected>STATUS_CODE_UNKNOWN</option>
+                            <option class="dropdown-item" value="10">STATUS_CODE_ON_TIME</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form">Timestamp</label>
+                        <input type="text" id="register-flight-timestamp" class="form-control">
+                        <btn class="btn btn-info" id="register-flight-current-timestamp" class="form-control">Current
+                            Timestamp</btn>
+                    </div>
+                    <btn class="btn btn-primary w-100" id="register-flight">Register Flight</btn>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div id="Insurances">
+            <h1>INSURANCE</h1>
+            <div class="row my-4 border border-secondary p-4">
+                <h5>PURCHASE INSURANCE</h5>
+                <form class="w-100">
+                    <div class="form-group">
+                        <label class="form">Flight reference</label>
+                        <input type="text" id="insurance-flight-reference" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="form">Insuree address</label>
+                        <input type="text" id="insuree-insurance-address" class="form-control">
+                        <small id="insuree-insurance-address-help" class="form-text text-muted">In case you're buying
+                            insurance for someone else..</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="form">Insurance amount</label>
+                        <input type="text" id="insurance-amount" placeholder="1" class="form-control">
+                    </div>
+                    <btn class="btn btn-primary w-100" id="purchase-insurance">Purchase Insurance</btn>
+                </form>
+            </div>
+            <div class="row my-4 border border-secondary p-4">
+                <h5>CHECK CREDITS</h5>
+                <form class="w-100">
+                    <div class="form-group">
+                        <label class="form">Insuree address</label>
+                        <input type="text" id="insuree-address" class="form-control">
+                    </div>
+                    <btn class="btn btn-primary w-100" id="check-credits">Check for Credits</btn>
+                    <hr class="border border-secondary" />
+                    <div class="form-group">
+                        <label class="form">Credits</label>
+                        <span id="insuree-credits" class="text-success"></span>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="row my-4 border border-secondary p-4">
+                <h5>CLAIM INSURANCE</h5>
+                <form class="w-100">
+                    <span id="claim-insurance-help" class="form-text text-muted">In the event of a delay due
+                        to airline fault, you will be credited 1.5X the amount paid on purchase</span>
+                    <div class="form-group">
+                        <label class="form">Insuree address</label>
+                        <input type="text" id="insuree-claim-address" class="form-control">
+                    </div>
+                    <btn class="btn btn-primary w-100" id="claim-insurance">Claim insurance</btn>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Flight Oracles-->
+    <main class="container" id="ContractInformation">
+        <h1>ORACLES</h1>
+        <div class="row my-4 border border-secondary p-4">
+            <form class="w-100">
+                <div class="form-group">
+                    <label class="form">Flight reference</label>
+                    <input type="text" id="flight-number" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form">Airline</label>
+                    <input type="text" id="submit-oracles-airline" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="form">Timestamp</label>
+                    <input type="text" id="submit-oracles-timestamp" class="form-control">
+                    <btn class="btn btn-info" id="submit-oracles-current-timestamp" class="form-control">Current
+                        Timestamp</btn>
+                </div>
+                <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+            </form>
+        </div>
+
+        <h1>ADMIN</h1>
+        <div class="row my-4 border border-secondary p-4">
+            <div id="display-wrapper" class="my-3"></div>
+            <btn class="btn btn-primary w-100 p-3" id="operation-change">Change Operating Status</btn>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

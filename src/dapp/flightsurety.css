@@ -1,0 +1,110 @@
+body {
+    background-image: url('planes.jpg'); /* Source: unsplash */
+    background-size:contain;
+    font-family: 'Hammersmith One', sans-serif; 
+}
+
+.container {
+    margin-top: 90px;
+    /*background-color: rgb(0, 34, 128);*/
+    opacity: 0.93;
+    color: #fff;
+    width: 100%;
+    padding: 40px;
+    max-height:fit-content;
+    overflow:visible;
+}
+
+.top-20 {
+    margin-top: 20px;
+}
+
+h1, h2 {
+    color:#022a88;
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+}
+
+h5 {
+    color: #ffffff;
+    font-family: 'Archivo Black', sans-serif;
+    font-stretch: expanded;
+}
+
+.dh, .navbar-nav{
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.field {
+    font-weight: bold;
+    text-align: right;
+    color:#ffffff;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+
+.field-value {
+    color: #b45203;
+    text-transform: uppercase;
+}
+
+label.form {
+    font-size: 25px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+label.form-label {
+    margin-left:20px;
+}
+
+input {
+    margin-right: 30px;
+}
+
+.error {
+    color: crimson;
+}
+
+.balance-wr {
+    font-size: 25px;
+}
+
+.btn-primary, .btn-info {
+    background-color: #973d09;
+    border-color: #973d09;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-stretch: expanded;
+}
+
+
+
+.bg-dark {
+    background-color: #022a88!important;
+}
+
+.my-4 {
+    background-color: rgb(0, 34, 128);
+}
+
+.mt-4{
+    font-size:20px;
+}
+
+.my-3 {
+    width: inherit;
+}
+
+.navbar-brand {
+    font-size: 43px;
+    font-family: 'Racing Sans One', cursive;
+}
