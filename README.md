@@ -4,15 +4,15 @@ FlightSurety is a project for Udacity's Blockchain Developer Nanodegree. It is a
 
 ## Project Feedback
 
-![Review1](images/review1.png?raw=true)
+![Review1](images/review1.PNG?raw=true)
 
-![Review2](images/review2.png?raw=true)
+![Review2](images/review2.PNG?raw=true)
 
-![Review3](images/review3.png?raw=true)
+![Review3](images/review3.PNG?raw=true)
 
-![Review4](images/review4.png?raw=true)
+![Review4](images/review4.PNG?raw=true)
 
-![Review5](images/review5.png?raw=true)
+![Review5](images/review5.PNG?raw=true)
 
 
 
@@ -70,13 +70,13 @@ Deploy the contents of the ./dapp folder
 
 ### Flight Surety Tests
 
-![Flight Surety Tests](images/fstests.png?raw=true "Flight Surety Tests")
+![Flight Surety Tests](images/fstests.PNG?raw=true "Flight Surety Tests")
 
 #### Oracle Tests
-![Oracle Tests](images/oracletest1.png?raw=true "Oracle Tests")
+![Oracle Tests](images/oracletest1.PNG?raw=true "Oracle Tests")
 
 
-![Oracle Tests](images/oracletest2.png?raw=true "Oracle Tests")
+![Oracle Tests](images/oracletest2.PNG?raw=true "Oracle Tests")
 
 ## Dapp UI
 
@@ -84,8 +84,8 @@ Deploy the contents of the ./dapp folder
 
 ![Dapp2](images/dapp2.png?raw=true)
 
-![Dapp3](images/dapp3.png?raw=true)
+![Dapp3](images/dapp3.PNG?raw=true)
 
-![Dapp4](images/dapp4.png?raw=true)
+![Dapp4](images/dapp4.PNG?raw=true)
 
-![Dapp5](images/dapp5.png?raw=true)
+![Dapp5](images/dapp5.PNG?raw=true)
