@@ -1,6 +1,8 @@
 # FlightSurety
 
-FlightSurety is a project for Udacity's Blockchain Developer Nanodegree. It is a flight insurance dapp. This is my submission.
+FlightSurety is a project for Udacity's Blockchain Engineer Nanodegree. It is a delayed flight insurance dapp.
+
+
 
 ## Project Feedback
 
